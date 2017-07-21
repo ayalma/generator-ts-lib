@@ -1,0 +1,21 @@
+
+{
+  "name": "<%= name %>",
+  "scripts": {
+    "build": "npm run clean && webpack --progress --colors && tsc && tsc -m es6 --outDir lib-esm",
+    "build:watch": "npm run clean && webpack --progress --colors  --watch && tsc -w && tsc -w -m es6 --outDir lib-esm",
+    "build:lib":"npm run clean && tsc",
+    "build:lib:watch":"npm run clean && tsc -w",
+    "clean":"rimraf _bundles lib lib-esm"
+
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "typescript": "^2.x",
+    "webpack":"^2.x",
+    "awesome-typescript-loader":"3.x",
+    "rimraf":"2.x"
+  }
+}
+
